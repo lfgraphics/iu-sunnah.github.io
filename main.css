@@ -1,0 +1,118 @@
+:root {
+    --head-back: #DFEBEF;
+    --white: white;
+    --primary: #ffbe4d;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url(./media/Header.svg);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    background-repeat: no-repeat;
+    padding-bottom: 57%;
+}
+
+head h1 {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-left: auto;
+    padding: 4px;
+    margin: 0;
+}
+
+.bismillah {
+    padding-top: 10px;
+    display: block;
+    height: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.date {
+    text-align: center;
+    background-color: var(--white);
+    padding: 4px;
+    font-weight: 700;
+}
+
+.font-ur {
+    font-family: 'Noto Nastaliq Urdu', serif;
+}
+
+#Ur-head {
+    /* margin: 1em; */
+    padding-top: 0.5em;
+    padding-bottom: 1.5em;
+}
+
+.duaao-azkar {
+    background-color: var(--primary);
+    padding: 1em;
+    border-radius: 6px;
+    color: var(--white);
+    margin-bottom: 0.5em;
+}
+
+.this-weak {
+    border: 1px solid black;
+    padding: 1em;
+}
+
+/* ---------accordian from W3 School--- */
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    text-align: center;
+    font-weight: 700;
+    font-size: large;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+    background-color: var(--head-back);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: var(--white);
+    display: none;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        height: 250px;
+    }
+
+    .bismillah {
+        height: 45px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    header {
+        height: 150px;
+    }
+
+    .bismillah {
+        height: 40px;
+    }
+}
