@@ -1,7 +1,8 @@
 :root {
     --head-back: #DFEBEF;
     --white: white;
-    --primary: #ffbe4d;
+    --primary: #162542;
+    --secondary: #9AD8E8;
 }
 
 body {
@@ -52,6 +53,17 @@ head h1 {
     padding-bottom: 1.5em;
 }
 
+.container a {
+    text-decoration: none;
+}
+
+.this-weak {
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 7px;
+    margin-bottom: 1em;
+}
+
 .duaao-azkar {
     background-color: var(--primary);
     padding: 1em;
@@ -60,17 +72,12 @@ head h1 {
     margin-bottom: 0.5em;
 }
 
-.this-weak {
-    border: 1px solid black;
-    padding: 1em;
-}
-
 /* ---------accordian from W3 School--- */
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-    background-color: #eee;
-    color: #444;
+    background-color: var(--secondary);
+    color: #444444;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -81,12 +88,21 @@ head h1 {
     text-align: center;
     font-weight: 700;
     font-size: large;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .accordion:hover {
     background-color: var(--head-back);
+}
+
+.content{
+    display: flex;
+    align-self: flex-end;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
 }
 
 /* Style the accordion panel. Note: hidden by default */

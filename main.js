@@ -117,3 +117,57 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+
+// -------------for WPA--------
+
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js").then(registration => {
+        console.log("sw Registered!");
+        console.log(registration);
+    }).catch(error => {
+        console.log("sw Registration Faild")
+        console.log(error);
+    });
+};
+
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+});
+
+function install() {
+    function trigger() {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log("user accepted the A2HS prompt");
+            }
+            deferredPrompt = null;
+        })
+    }
+}
+
+// ----------install WPA ----------
+
+window.addEventListener('beforeinstallPrompt', (e) => {
+    let btnAdd = document.getElementById("btnAdd")
+    deferredPrompt = e;
+    btnAdd.style.display = "none";
+    showInstallPrompt();
+})
+let btnAdd = document.getElementById("btnAdd")
+btnAdd.addEventListener('click',(e)=> {
+    btnAdd.style.display = "none";
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+            btnAdd.style.display = "none";
+            console.log('user accepted the A2HS prompt');
+        } else {
+            console.log('user dismissed the A2HS prompt');
+            btnAdd.style.display = "block";
+        }
+        deferredPrompt = null;
+    })
+})
