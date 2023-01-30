@@ -98,7 +98,7 @@ head h1 {
     background-color: var(--head-back);
 }
 
-.content{
+.content {
     display: flex;
     align-self: flex-end;
     flex-direction: row-reverse;
@@ -130,5 +130,27 @@ head h1 {
 
     .bismillah {
         height: 40px;
+    }
+}
+
+#btnAdd {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+#btnAdd {
+    display: none;
+}
+
+@media (display-mode: browser) {
+    #btnAdd {
+        display: block
+    }
+}
+
+@media (display-mode:fullscreen) {
+    #btnAdd {
+        display: none
     }
 }

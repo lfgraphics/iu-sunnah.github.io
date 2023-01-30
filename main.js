@@ -156,9 +156,18 @@ window.addEventListener('beforeinstallPrompt', (e) => {
     btnAdd.style.display = "none";
     showInstallPrompt();
 })
+
+// window.addEventListener('load', (e) => {
+//     setTimeout(function () {
+//         return install_app()
+//     }, 1000)
+// })
+
+// function install_app() {
+// }
+
 let btnAdd = document.getElementById("btnAdd")
 btnAdd.addEventListener('click',(e)=> {
-    btnAdd.style.display = "none";
     deferredPrompt.prompt();
     deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
