@@ -157,17 +157,8 @@ window.addEventListener('beforeinstallPrompt', (e) => {
     showInstallPrompt();
 })
 
-// window.addEventListener('load', (e) => {
-//     setTimeout(function () {
-//         return install_app()
-//     }, 1000)
-// })
-
-// function install_app() {
-// }
-
 let btnAdd = document.getElementById("btnAdd")
-btnAdd.addEventListener('click',(e)=> {
+btnAdd.addEventListener('click', (e) => {
     deferredPrompt.prompt();
     deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
@@ -180,3 +171,7 @@ btnAdd.addEventListener('click',(e)=> {
         deferredPrompt = null;
     })
 })
+
+function call(){
+    // setTimeout(function(){document.getElementById("btnAdd").click()},1000)
+}

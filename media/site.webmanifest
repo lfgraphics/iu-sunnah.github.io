@@ -1,14 +1,13 @@
 {
-    "name": "Ahya us Sunnah | احیاء السنہ",
-    "short_name": "Ahya us Sunnah | احیاء السنہ",
+    "name": "IuS | اِحْیَاْءُ السُّنَّہْ",
+    "short_name": "Ihya us Sunnah | اِحْیَاْءُ السُّنَّہْ",
     "description": "The purpose of this application is to spread good Deeds and Deen al Islam and the most important - make ourselves Deendaar",
     "orientation": "portrait-primary",
     "background_color": "#9AD8E8",
     "theme_color": "#162542",
-    "display": "fullscreen",
+    "display": "standalone",
     "start_url": "../",
     "id": "/media/",
-
     "icons": [
         {
             "src": "android-chrome-192x192.png",

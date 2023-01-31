@@ -1,0 +1,51 @@
+.cntnr {
+    background-color: var(--primary);
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.display {
+    background-color: var(--head-back);
+    color: var(--primary);
+    text-align: center;
+    padding: 1.5em;
+    width: 30%;
+    height: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    margin-top: 30vh;
+    font-weight: 900;
+    border-radius: 5%;
+}
+
+.counter {
+    background-color: var(--secondary);
+    color: var(--primary);
+    text-align: center;
+    height: 25vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+.number {
+    background-color: var(--primary);
+    color: var(--secondary);
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    align-items: center;
+    align-content: center;
+}
+
+.number h1 {
+    padding-top: 12px;
+}
