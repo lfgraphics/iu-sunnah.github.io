@@ -1,3 +1,20 @@
+// -------- greeting and soting name of the user and playing drud shrif --------------
+document.getElementById("username").innerHTML = localStorage.getItem("Name");
+function _play() {
+    let btn = document.getElementById("darurd");
+    let darud = new Audio('/media/darud-sharif.mp3');
+    darud.play()
+    document.getElementById("popup").style.display = "none";
+}
+
+const userName = localStorage.getItem("Name")
+if (userName == undefined) {
+    localStorage.setItem("Name", prompt("Please enter your Name"));
+    document.getElementById("username").innerHTML = localStorage.getItem("Name");
+}
+
+// -------- hijri date showing ----------
+{ 
 function gmod(n, m) {
     return ((n % m) + m) % m;
 }
@@ -95,8 +112,10 @@ function writeIslamicDate(adjustment) {
     return outputIslamicDate;
 }
 
-document.getElementById("date").innerHTML = writeIslamicDate((-1))
-
+document.getElementById("date").innerHTML = writeIslamicDate((-1));
+let now = getDate()
+document.getElementById("today").innerHTML = now.getDate();
+}
 // ----accordian from W3 School----
 
 var acc = document.getElementsByClassName("accordion");
@@ -123,7 +142,7 @@ for (i = 0; i < acc.length; i++) {
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").then(registration => {
         console.log("sw Registered!");
-        console.log(registration);
+        // console.log(registration);z
     }).catch(error => {
         console.log("sw Registration Faild")
         console.log(error);
@@ -172,6 +191,6 @@ btnAdd.addEventListener('click', (e) => {
     })
 })
 
-function call(){
+function call() {
     // setTimeout(function(){document.getElementById("btnAdd").click()},1000)
 }

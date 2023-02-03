@@ -4,7 +4,7 @@ self.addEventListener('install', e => {
     self.skipWaiting()
     e.waitUntill(
         caches.open(cachename).then(Cache => {
-            const arr = [
+            const necessaryFiles = [
                 "./",
                 "./main.css",
                 "./main.js",
@@ -19,9 +19,10 @@ self.addEventListener('install', e => {
                 "./du'a-o-azkar/media/masael.jpg",
                 "./du'a-o-azkar/media/morning.jpg",
                 "./du'a-o-azkar/media/sunnat.webp",
-                "./du'a-o-azkar/media/tibb-e-nabvi.jpg"
+                "./du'a-o-azkar/media/tibb-e-nabvi.jpg",
+                "/media/darud-sharif.mp3"
             ]
-            return Cache.addAll(arr)
+            return Cache.addAll(necessaryFiles)
         })
     );
 });

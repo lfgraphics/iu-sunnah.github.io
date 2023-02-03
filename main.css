@@ -25,6 +25,18 @@ header {
     padding-bottom: 70%;
 }
 
+.popup {
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--head-back);
+    width: max-content;
+    height: max-content;
+    margin: 1.5em auto 1.5em auto;
+    padding: 1em;
+    border-radius: 6px;
+}
+
 head h1 {
     display: flex;
     position: relative;
