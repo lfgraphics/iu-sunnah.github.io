@@ -8,7 +8,7 @@ function _play() {
 }
 
 const userName = localStorage.getItem("Name")
-if (userName === undefined || null) {
+if (userName == undefined || null) {
     localStorage.setItem("Name", prompt("Please enter your Name"));
     document.getElementById("username").innerHTML = localStorage.getItem("Name");
 }
