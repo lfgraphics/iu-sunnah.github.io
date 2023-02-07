@@ -33,11 +33,20 @@
     <title>Ihya us Sunnah</title>
 </head>
 
-<body onload="call()">
+<body>
     <header>
     </header>
     <div class="date unselectable" id="date"></div>
     <div class="today unselectable" id="date"></div>
+
+    <div class="greeting">
+        <div class="f-greeting" id="welcome">
+            <form action="">
+                <input type="text" name="User Name" id="userName" placeholder="Your Name" required>
+            </form>
+        </div>
+        <div class="welcome-greeting" id="welcomeBack"></div>
+    </div>
 
     <div class="popup" id="popup">
         <div class="card-body">
@@ -53,7 +62,7 @@
     </a>
     <hr>
     <div class="container unselectable">
-        <a href="/Du'a-o-azkar/">
+        <a href="/dua/">
             <div class="duaao-azkar text-center" id="duaoAzkar">
                 <h3>Du'a-o-Azkar | <span class="font-ur">دعاء و اذکار</span></h3>
             </div>
@@ -62,48 +71,80 @@
         <div class="this-weak">
             <h2 class="font-ur text-center fw-bolder" id="Ur-head">اس ہفتے کا پیغام</h2>
             <button class="accordion">Sunnat | <span class="font-ur">سنت</span></button>
-            <div class="panel">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis animi minus delectus numquam,
-                    adipisci
-                    inventore aliquam dignissimos? Illo non magnam voluptate tenetur exercitationem voluptates!
-                    Doloribus
-                    qui nihil delectus laborum possimus.</p>
+            <div class="panel" id="Sunnat">
+                <div class="row1  my-3">
+                    <div class="col-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sapiente nam
+                        cumque temporibus excepturi, possimus nulla veniam! Voluptas, quam! Necessitatibus ratione
+                        adipisci fugit dicta animi tenetur ipsum asperiores exercitationem eligendi.</div>
+                        <div class="col-right font-ur">
+                            لارم اپسم دالر سٹ امٹ چنسکٹیٹر اڈیپیسنگ
+                        </div>
+                </div>
+                <div class="mx-auto text-center">
+                <a href="/dua/"><button class="btn btn-primary">Read more.. | <span class="font-ur">اور پڑھیں</span></button></a>
+                </div>
             </div>
             <hr>
             <button class="accordion">Farz | <span class="font-ur">فرض</span></button>
-            <div class="panel">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis animi minus delectus numquam,
-                    adipisci
-                    inventore aliquam dignissimos? Illo non magnam voluptate tenetur exercitationem voluptates!
-                    Doloribus
-                    qui nihil delectus laborum possimus.</p>
+            <div class="panel" id="Farz">
+                <div class="row1  my-3">
+                    <div class="col-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sapiente nam
+                        cumque temporibus excepturi, possimus nulla veniam! Voluptas, quam! Necessitatibus ratione
+                        adipisci fugit dicta animi tenetur ipsum asperiores exercitationem eligendi.</div>
+                        <div class="col-right font-ur">
+                            لارم اپسم دالر سٹ امٹ چنسکٹیٹر اڈیپیسنگ
+                        </div>
+                </div>
+                <div class="mx-auto text-center">
+                <a href="/dua/"><button class="btn btn-primary">Read more.. | <span class="font-ur">اور پڑھیں</span></button></a>
+                </div>
             </div>
             <hr>
-            <button class="accordion">Tibb-e-Nabwi se Ilaj | <span class="font-ur">طب نبوی سے علاج</span></button>
-            <div class="panel">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis animi minus delectus numquam,
-                    adipisci
-                    inventore aliquam dignissimos? Illo non magnam voluptate tenetur exercitationem voluptates!
-                    Doloribus
-                    qui nihil delectus laborum possimus.</p>
+            <button class="accordion">Tibb-e-Nabwi se Ilaj | <span class="font-ur">طب نبوی
+                    سے علاج</span></button>
+            <div class="panel" id="T  my-3ibb">
+                <div class="row1">
+                    <div class="col-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sapiente nam
+                        cumque temporibus excepturi, possimus nulla veniam! Voluptas, quam! Necessitatibus ratione
+                        adipisci fugit dicta animi tenetur ipsum asperiores exercitationem eligendi.</div>
+                        <div class="col-right font-ur">
+                            لارم اپسم دالر سٹ امٹ چنسکٹیٹر اڈیپیسنگ
+                        </div>
+                        <div class="mx-auto text-center">
+                </div>
+                </div>
+                <a href="/dua/"><button class="btn btn-primary">Read more.. | <span class="font-ur">اور پڑھیں</span></button></a>
             </div>
             <hr>
-            <button class="accordion">Quraan se Naseehat | <span class="font-ur">قرآن کی نصیحت</span></button>
-            <div class="panel">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis animi minus delectus numquam,
-                    adipisci
-                    inventore aliquam dignissimos? Illo non magnam voluptate tenetur exercitationem voluptates!
-                    Doloribus
-                    qui nihil delectus laborum possimus.</p>
+            <button class="accordion">Quraan se Naseehat | <span class="font-ur">قرآن کی
+                    نصیحت</span></button>
+            <div class="panel" id="Q  my-3uraan">
+                <div class="row1">
+                    <div class="col-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sapiente nam
+                        cumque temporibus excepturi, possimus nulla veniam! Voluptas, quam! Necessitatibus ratione
+                        adipisci fugit dicta animi tenetur ipsum asperiores exercitationem eligendi.</div>
+                        <div class="col-right font-ur">
+                            لارم اپسم دالر سٹ امٹ چنسکٹیٹر اڈیپیسنگ
+                        </div>
+                        <div class="mx-auto text-center">
+                </div>
+                </div>
+                <a href="/dua/"><button class="btn btn-primary">Read more.. | <span class="font-ur">اور پڑھیں</span></button></a>
             </div>
             <hr>
             <button class="accordion">Masla | <span class="font-ur">مسئلہ</span></button>
-            <div class="panel">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis animi minus delectus numquam,
-                    adipisci
-                    inventore aliquam dignissimos? Illo non magnam voluptate tenetur exercitationem voluptates!
-                    Doloribus
-                    qui nihil delectus laborum possimus.</p>
+            <div class="panel" id="Masla">
+                <div class="row1  my-3">
+                    <div class="col-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sapiente nam
+                        cumque temporibus excepturi, possimus nulla veniam! Voluptas, quam! Necessitatibus ratione
+                        adipisci fugit dicta animi tenetur ipsum asperiores exercitationem eligendi.</div>
+                        <div class="col-right font-ur">
+                            لارم اپسم دالر سٹ امٹ چنسکٹیٹر اڈیپیسنگ
+                        </div>
+                </div>
+                <div class="mx-auto text-center">
+                <a href="/dua/"><button class="btn btn-primary">Read more.. | <span class="font-ur">اور پڑھیں</span></button></a>
+                </div>
             </div>
             <button class="btn btn-primary" id="btnAdd">
                 Install this application

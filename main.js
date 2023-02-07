@@ -4,7 +4,7 @@ function _play() {
     let btn = document.getElementById("darurd");
     let darud = new Audio('/media/darud-sharif.mp3');
     darud.play()
-    document.getElementById("popup").style.display = "none";
+    event.currentTarget.parentElement.parentElement.style.display = 'none';
 }
 
 const userName = localStorage.getItem("Name")
@@ -112,10 +112,23 @@ function writeIslamicDate(adjustment) {
     return outputIslamicDate;
 }
 
-document.getElementById("date").innerHTML = writeIslamicDate((-1));
-let now = getDate()
-document.getElementById("today").innerHTML = now.getDate();
 }
+/*
+// --------accordians as tablinks and tabcontents of lfgraphics.github.io----
+var accordians = document.getElementsByClassName("accordion");
+var panels = document.getElementsByClassName("panel");
+function opensection(accordianname) {
+    for (accordian of accordians) {
+        accordian.classList.remove("active-acc");
+    }
+    for (panel of panels) {
+        panel.classList.remove("active-panel");
+    }
+    event.currentTarget.classList.add("active-acc");
+    document.getElementsByClassName(accordianname).classList.add("active-panel");
+}
+*/
+
 // ----accordian from W3 School----
 
 var acc = document.getElementsByClassName("accordion");
@@ -142,7 +155,7 @@ for (i = 0; i < acc.length; i++) {
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").then(registration => {
         console.log("sw Registered!");
-        // console.log(registration);z
+        // console.log(registration);
     }).catch(error => {
         console.log("sw Registration Faild")
         console.log(error);
@@ -191,6 +204,20 @@ btnAdd.addEventListener('click', (e) => {
     })
 })
 
-function call() {
-    // setTimeout(function(){document.getElementById("btnAdd").click()},1000)
-}
+
+const input = document.querySelector("input");
+const label = input.placeholder;
+
+input.addEventListener("focus", () => {
+  label.style.transform = "translateY(-30px)";
+  label.style.fontSize = "12px";
+  label.style.color = "#333";
+});
+
+input.addEventListener("blur", () => {
+  if (!input.value) {
+    label.style.transform = "translateY(0)";
+    label.style.fontSize = "16px";
+    label.style.color = "#999";
+  }
+});

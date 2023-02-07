@@ -1,3 +1,5 @@
+/* @import url(/dua/styles.css); */
+
 :root {
     --head-back: #DFEBEF;
     --white: white;
@@ -45,14 +47,14 @@ head h1 {
     padding: 4px;
     margin: 0;
 }
-
+/* 
 .bismillah {
     padding-top: 10px;
     display: block;
     height: 10vw;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 .date {
     text-align: center;
@@ -63,6 +65,13 @@ head h1 {
 
 .font-ur {
     font-family: 'Noto Nastaliq Urdu', serif;
+    text-align: right;
+    line-height: 2.5em;
+    margin-top: -0.3em;    
+}
+
+span.font-ur {
+    line-height: 0;
 }
 
 #Ur-head {
@@ -82,12 +91,37 @@ head h1 {
     margin-bottom: 1em;
 }
 
+.row1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.8em;
+
+}
+
+.col-left {
+    flex-basis: 50%;
+    text-align: left;
+}
+.col-right {
+    flex-basis: 50%;
+}
+
 .duaao-azkar {
     background-color: var(--primary);
     padding: 1em;
     border-radius: 6px;
     color: var(--white);
     margin-bottom: 0.5em;
+}
+
+/* --------accordians as tablinks and tabcontents of lfgraphics.github.io---- */
+
+.panel {
+    display: none;
+}
+.active-panel {
+    display: block;
 }
 
 /* ---------accordian from W3 School--- */

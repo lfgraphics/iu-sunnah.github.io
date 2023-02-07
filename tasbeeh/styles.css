@@ -1,22 +1,13 @@
+:root {
+    --kalima: green
+}
+
+@import url(../dua/styles.css);
+
 .cntnr {
     background-color: var(--primary);
     height: 100vh;
     overflow-y: hidden;
-}
-
-.display {
-    background-color: var(--head-back);
-    color: var(--primary);
-    text-align: center;
-    padding: 1.5em;
-    width: 30%;
-    height: 15%;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.5rem;
-    margin-top: 30vh;
-    font-weight: 900;
-    border-radius: 5%;
 }
 
 .counter {
@@ -33,6 +24,84 @@
     font-weight: bolder;
     font-size: 4rem;
 }
+
+.azkar {
+    width: 100vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align: center;
+    align-items: center;
+}
+
+.zikr {
+    overflow-y: auto;
+    scroll-behavior: auto;
+    background-color: var(--head-back);
+    height: 300px;
+    width: 93.5vw;
+    margin: 2em auto 1em auto;
+    border-radius: 6px;
+    padding: 1em;
+}
+
+.zikr::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    /* left: 10px;
+    right: 10px; */
+    height: 30px;
+    box-shadow: inset 0px -20px 20px -10px rgba(0, 0, 0, 0.548);
+}
+
+.klima {
+    color: var(--kalima);
+    text-align: center;
+}
+
+.azkar {
+    /* align-items: center; */
+    width: max-content;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.row1 {
+    margin: auto 1em auto 1em;
+
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details .col-left {
+    flex-basis: 48%;
+    text-align: left;
+}
+
+.details .col-right {
+    flex-basis: 48%;
+    text-align: right;
+}
+
+.font-ur .font-en {
+    font-family: "Poppins";
+    font-weight: 400;
+    color: var(--primary);
+    line-height: 2;
+}
+
+.font-ur p {
+    font-weight: 400;
+    color: var(--primary);
+    /* margin-top: -6; */
+    line-height: -4;
+}
+
 
 .number {
     background-color: var(--primary);
